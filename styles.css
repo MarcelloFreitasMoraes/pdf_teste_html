@@ -511,19 +511,26 @@ label {
   display: flex;
   justify-content: space-between;
   line-height: 20px;
+  margin-top: 20px;
 }
+
 .form-passo-membro {
   display: flex;
   flex-wrap: wrap;
   line-height: 20px;
 }
+
 .form-passo-2.border {
   border-bottom: 1px solid var(--cloud);
   padding-bottom: 20px;
 }
 
+.infos-passo-coordenador {
+  padding-left: 20px;
+}
+
 .box-info {
-  padding-top: 20px;
+  padding-top: 10px;
 }
 
 .box-info.membro {
@@ -536,6 +543,7 @@ label {
   font-style: normal;
   font-weight: 700;
 }
+
 .text-info {
   color: var(--shark);
   font-size: var(--font-size-m);
