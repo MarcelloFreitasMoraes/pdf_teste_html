@@ -531,6 +531,11 @@ label {
 
 .box-info {
   padding-top: 10px;
+  margin-left: 10px
+}
+
+.info-left {
+  padding-left: 10px;
 }
 
 .box-info.membro {
