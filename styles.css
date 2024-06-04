@@ -77,7 +77,7 @@ label {
 
 .chamada-projeto {
   margin-left: 20px;
-  padding: 20px 0;
+  padding-top: 10px;
 }
 
 .roboto-medium {
@@ -114,7 +114,7 @@ label {
   font-style: normal;
   font-weight: 500;
   text-transform: uppercase;
-  margin: 20px 0;
+  margin-top: 20px;
 }
 
 .title-passo {
@@ -137,9 +137,9 @@ label {
 }
 
 .grid {
-  margin: 40px 0;
-  border: 1px solid var(--cloud);
-  padding: 40px;
+  margin: 20px 0;
+  /* border: 1px solid var(--cloud); */
+  padding: 8px;
   border-radius: 10px;
 }
 
@@ -157,7 +157,7 @@ label {
 }
 
 .dados-inicio {
-  margin-top: 40px;
+  margin-top: 20px;
   display: flex;
   justify-content: space-between;
 }
@@ -216,7 +216,7 @@ label {
 } */
 
 .grid-resumo {
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 .info-text-grid {
@@ -229,7 +229,7 @@ label {
 }
 
 .grid-antecedentes {
-  margin: 60px 0;
+  margin: 30px 0;
 }
 
 .grid-obj {
@@ -262,15 +262,20 @@ label {
 }
 
 .box-chamada-grid {
-  border-left: 5px solid var(--shark);
   margin-right: 10px;
   width: 100%;
-  margin: 30px 0;
-  background-color: var(--white);
+  margin-top: 20px;
+}
+
+.box-info-text {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
+}
+
+.grid-border {
+  border-bottom: 1px solid var(--cloud);
+  margin-bottom: 10px;
 }
 
 .grid-title {
@@ -280,6 +285,7 @@ label {
   font-weight: 700;
   line-height: 24px;
   margin-bottom: 15px;
+  border-bottom: 1px solid var(--cloud);
 }
 
 .chamada-projeto-atividade {
@@ -288,10 +294,8 @@ label {
 }
 
 .box-chamada-atividade {
-  border-left: 5px solid var(--shark);
   margin-right: 10px;
   width: 100%;
-  background-color: var(--white);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -309,28 +313,27 @@ label {
   line-height: 24px;
   margin-bottom: 25px;
   text-transform: uppercase;
+  border-bottom: 1px solid var(--cloud);
 }
 
 .box-chamada-indicadores {
-  border-left: 5px solid var(--shark);
   margin-right: 10px;
   width: 100%;
-  background-color: var(--white);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 20px;
+  /* margin-top: 20px; */
 }
 
 .box-indicadores {
   display: flex;
   justify-content: space-between;
-  margin: 30px 0;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--cloud);
 }
 
 .grid-indicador {
   margin-left: 20px;
-  padding-top: 30px;
   width: 100%;
 }
 
@@ -358,34 +361,31 @@ label {
   font-style: normal;
   font-weight: 700;
   line-height: 24px;
-  margin-bottom: 25px;
   text-transform: uppercase;
+  border-bottom: 1px solid var(--cloud);
 }
 
 .box-chamada-produtos {
-  border-left: 5px solid var(--shark);
   margin-right: 10px;
   width: 100%;
-  background-color: var(--white);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 20px;
+  /* margin-top: 20px; */
 }
 
 .produtos-gerados {
-  margin: 30px 0;
+  padding-bottom: 30px;
+  border-bottom: 1px solid var(--cloud);
 }
 
 .box-chamada-marco {
-  border-left: 5px solid var(--shark);
   margin-right: 10px;
   width: 100%;
-  background-color: var(--white);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 20px;
+  /* margin-top: 20px; */
 }
 
 .marco-tipo {
@@ -401,26 +401,27 @@ label {
   border-left: 5px solid var(--shark);
   margin-right: 10px;
   width: 100%;
-  background-color: var(--white);
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .grid-riscos {
-  margin-left: 20px;
-  padding-top: 30px;
+  /* margin-left: 20px; */
   width: 100%;
 }
+
 .box-riscos {
   margin-left: 20px;
-  padding: 30px 0;
   width: 100%;
+  margin-top: 30px;
 }
 
 .riscos-info {
   display: flex;
   width: 100%;
+  padding: 30px 0;
+  border-bottom: 1px solid var(--cloud);
 }
 
 .riscos-tipo {
@@ -430,56 +431,114 @@ label {
 .box-circule-pergunta {
   display: flex;
   align-items: center;
-  margin-bottom: 60px;
 }
 
 .grid-questao {
-  margin-top: 50px;
-  margin: 40px 0;
-  border: 1px solid var(--cloud);
-  padding: 40px;
-  border-radius: 10px;
+  padding: 8px;
 }
 
 .box-questao {
   margin-top: 30px;
-  display: flex;
   width: 100%;
 }
 
 .pergunta-title-contant {
   width: 180px;
+  margin-bottom: 20px;
 }
 
 .perguntas-title {
-  margin-left: 30px;
+  /* margin-left: 30px; */
   color: var(--shark);
-  font-size: var(--font-size-xxl);
+  font-size: var(--font-size-xl);
   font-style: normal;
   font-weight: 700;
   text-transform: uppercase;
 }
 
 .pergunta-card {
-  margin-left: 30px;
-  padding-left: 10px;
-  border-left: 2px solid var(--bon-jour);
+  /* margin-left: 30px; */
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--cloud);
   width: 100%;
 }
 
 .text-pergunta {
   color: var(--shark);
   font-size: var(--font-size-m);
-  font-style: normal;
   font-weight: 700;
-  text-align: start;
   line-height: 16px;
 }
+
 .text-resposta {
+  color: var(--shark);
+  font-size: var(--font-size-m);
+  font-weight: 400;
+  line-height: 16px;
+}
+
+/* PASSO 2 */
+
+.box-coordenador {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.border-title {
+  border-left: 4px solid var(--tuatara);
+  border-radius: 10px;
+  height: 19px;
+  margin-right: 10px;
+}
+
+.coordenador-title {
+  color: var(--tuatara);
+  text-transform: uppercase;
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.grid-passo-2 {
+  margin-top: 20px;
+  /* border: 1px solid var(--cloud); */
+  padding: 8px;
+  border-radius: 10px;
+}
+
+.form-passo-2 {
+  display: flex;
+  justify-content: space-between;
+  line-height: 20px;
+}
+.form-passo-membro {
+  display: flex;
+  flex-wrap: wrap;
+  line-height: 20px;
+}
+.form-passo-2.border {
+  border-bottom: 1px solid var(--cloud);
+  padding-bottom: 20px;
+}
+
+.box-info {
+  padding-top: 20px;
+}
+
+.box-info.membro {
+  width: 300px;
+}
+
+.title-info {
+  color: var(--tuatara);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 700;
+}
+.text-info {
   color: var(--shark);
   font-size: var(--font-size-m);
   font-style: normal;
   font-weight: 400;
-  text-align: start;
-  line-height: 16px;
 }
