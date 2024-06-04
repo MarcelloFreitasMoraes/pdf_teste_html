@@ -267,7 +267,7 @@ label {
   margin-top: 20px;
 }
 
-.box-info-text { 
+.box-info-text {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -407,7 +407,7 @@ label {
 }
 
 .grid-riscos {
-  margin-left: 20px;
+  /* margin-left: 20px; */
   width: 100%;
 }
 
@@ -448,16 +448,16 @@ label {
 }
 
 .perguntas-title {
-  margin-left: 30px;
+  /* margin-left: 30px; */
   color: var(--shark);
-  font-size: var(--font-size-xxl);
+  font-size: var(--font-size-xl);
   font-style: normal;
   font-weight: 700;
   text-transform: uppercase;
 }
 
 .pergunta-card {
-  margin-left: 30px;
+  /* margin-left: 30px; */
   padding-bottom: 20px;
   border-bottom: 1px solid var(--cloud);
   width: 100%;
@@ -466,17 +466,14 @@ label {
 .text-pergunta {
   color: var(--shark);
   font-size: var(--font-size-m);
-  font-style: normal;
   font-weight: 700;
-  text-align: start;
   line-height: 16px;
 }
+
 .text-resposta {
   color: var(--shark);
   font-size: var(--font-size-m);
-  font-style: normal;
   font-weight: 400;
-  text-align: start;
   line-height: 16px;
 }
 
@@ -485,14 +482,14 @@ label {
 .box-coordenador {
   display: flex;
   align-items: center;
-  padding-top: 40px;
+  margin-top: 30px;
 }
 
 .border-title {
   border-left: 4px solid var(--tuatara);
   border-radius: 10px;
   height: 19px;
-  margin: 0 20px;
+  margin-right: 10px;
 }
 
 .coordenador-title {
@@ -503,26 +500,45 @@ label {
   font-weight: 700;
 }
 
-.form {
+.grid-passo-2 {
+  margin-top: 20px;
+  /* border: 1px solid var(--cloud); */
+  padding: 8px;
+  border-radius: 10px;
+}
+
+.form-passo-2 {
   display: flex;
+  justify-content: space-between;
+  line-height: 20px;
+}
+.form-passo-membro {
+  display: flex;
+  flex-wrap: wrap;
+  line-height: 20px;
+}
+.form-passo-2.border {
+  border-bottom: 1px solid var(--cloud);
+  padding-bottom: 20px;
 }
 
 .box-info {
-  margin-left: 20px;
-  padding-top: 40px;
+  padding-top: 20px;
+}
+
+.box-info.membro {
+  width: 300px;
 }
 
 .title-info {
   color: var(--tuatara);
-  text-transform: uppercase;
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-m);
   font-style: normal;
   font-weight: 700;
 }
 .text-info {
   color: var(--shark);
-  text-transform: uppercase;
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-m);
   font-style: normal;
   font-weight: 400;
 }
