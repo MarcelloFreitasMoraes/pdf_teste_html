@@ -509,7 +509,7 @@ label {
 
 .form-passo-2 {
   display: flex;
-  justify-content: space-between;
+ justify-content: space-between;
   line-height: 20px;
   margin-top: 20px;
 }
@@ -518,6 +518,7 @@ label {
   display: flex;
   flex-wrap: wrap;
   line-height: 20px;
+  margin-top: 20px;
 }
 
 .form-passo-2.border {
@@ -549,9 +550,50 @@ label {
   font-weight: 700;
 }
 
+.title-info-doc {
+  color: var(--tuatara);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+  text-decoration: underline;
+}
+
 .text-info {
   color: var(--shark);
   font-size: var(--font-size-m);
   font-style: normal;
   font-weight: 400;
 }
+
+.box-chamada-cronograma-fisico {
+  margin-right: 10px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.box-cronograma-fisico-atividades {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--cloud);
+}
+
+.indicador-description-cronograma-fisico {
+  width: 100%;
+}
+
+
+.info-title-cronograma-fisico {
+  color: var(--shark);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-align: start;
+}
+/* PASSO 4 */
+
