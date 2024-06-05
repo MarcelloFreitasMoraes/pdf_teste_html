@@ -509,7 +509,7 @@ label {
 
 .form-passo-2 {
   display: flex;
- justify-content: space-between;
+  justify-content: space-between;
   line-height: 20px;
   margin-top: 20px;
 }
@@ -532,7 +532,7 @@ label {
 
 .box-info {
   padding-top: 10px;
-  margin-left: 10px
+  margin-left: 10px;
 }
 
 .info-left {
@@ -586,14 +586,73 @@ label {
   width: 100%;
 }
 
-
 .info-title-cronograma-fisico {
   color: var(--shark);
   font-size: var(--font-size-m);
-  font-style: normal;
   font-weight: 700;
   margin-bottom: 10px;
   text-align: start;
 }
+
 /* PASSO 4 */
 
+.grid-title-cronograma-atividade {
+  color: var(--tuatara);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--cloud);
+  margin-bottom: 15px;
+}
+
+.form-passo-cronograma-financeiro {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  line-height: 20px;
+  margin-top: 20px;
+  border-top: 1px solid var(--cloud);
+}
+
+.title-info.valor {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  line-height: 20px;
+  margin-top: 20px;
+  border-top: 1px solid var(--cloud);
+}
+
+.box-valores {
+  display: flex;
+  margin: 20px 0;
+  justify-content: space-between;
+}
+
+.box-info-cronograma {
+  padding-top: 10px;
+  margin-left: 10px;
+}
+
+.box-info-cronograma.width {
+  width: 200px;
+}
+
+.box-info-cronograma.valor {
+  width: 130px;
+}
+
+.box-info-cronograma.valor.line {
+  line-height: 32px;
+}
+
+.box-info-cronograma.width.line {
+  line-height: 32px;
+}
+
+.valor-cronograma {
+  display: flex;
+  flex-direction: column;
+}
