@@ -44,7 +44,8 @@ h2,
 h3,
 h4,
 p,
-label {
+label,
+td, tr {
   font-family: var(--font-family-roboto);
 }
 
@@ -130,10 +131,8 @@ label {
 }
 
 .circule {
-  border-radius: 50%;
-  background-color: var(--primary);
-  width: 10px;
-  height: 10px;
+  color: var(--primary);
+  font-size: 24px;
 }
 
 .grid {
@@ -149,7 +148,7 @@ label {
 }
 
 .topico-passo {
-  margin-left: 30px;
+  margin-left: 10px;
   color: var(--shark);
   font-size: var(--font-size-xxl);
   font-style: normal;
@@ -599,22 +598,11 @@ label {
 .grid-title-cronograma-atividade {
   color: var(--tuatara);
   font-size: var(--font-size-m);
-  font-style: normal;
   font-weight: 700;
   line-height: 24px;
   text-transform: uppercase;
   border-bottom: 1px solid var(--cloud);
   margin-bottom: 15px;
-}
-
-.form-passo-cronograma-financeiro {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 20px;
-  width: 100%;
-  line-height: 20px;
-  margin-top: 20px;
-  border-top: 1px solid var(--cloud);
 }
 
 .title-info.valor {
@@ -637,29 +625,47 @@ label {
   margin-left: 10px;
 }
 
-.box-info-cronograma.width {
-  width: 200px;
-  white-space: nowrap;        /* Impede a quebra de linha */
-  overflow: hidden;           /* Oculta o texto que ultrapassa o contêiner */
-  text-overflow: ellipsis;    /* Adiciona reticências (...) ao texto que é truncado */
-}
-
-.box-info-cronograma.valor {
-  width: 130px;
-}
-
-.box-info-cronograma.valor.line {
-  line-height: 32px;
-}
-
-.box-info-cronograma.width.line {
-  line-height: 32px;
-  white-space: nowrap;        /* Impede a quebra de linha */
-  overflow: hidden;           /* Oculta o texto que ultrapassa o contêiner */
-  text-overflow: ellipsis;    /* Adiciona reticências (...) ao texto que é truncado */
-}
-
 .valor-cronograma {
   display: flex;
   flex-direction: column;
 }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 18px;
+  text-align: left;
+}
+
+table thead tr {
+  background-color: #f2f2f2;
+}
+
+table th, table td {
+  padding: 4px 6px;
+  border: 1px solid #ddd;
+}
+th {
+  color: var(--tuatara);
+  font-size: var(--font-size-m);
+  font-weight: 700;
+  line-height: 24px;
+}
+
+td {
+  color: var(--tuatara);
+  font-size: var(--font-size-m);
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.center-valor {
+text-align: center;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* PASSO 5 */
