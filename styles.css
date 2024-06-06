@@ -8,7 +8,7 @@
   --cloud: #c4c4c4;
   --cod-gray: #070707;
   --cultured-pearl: #f5f5f5;
-  --gallery: #f0f0f0;
+  --gallery: #f2f2f2;
   --hint-of-red: #f9f9f9;
   --nobel: #b1b1b1;
   --onyx: #313538;
@@ -45,7 +45,8 @@ h3,
 h4,
 p,
 label,
-td, tr {
+td,
+tr {
   font-family: var(--font-family-roboto);
 }
 
@@ -501,7 +502,6 @@ td, tr {
 
 .grid-passo-2 {
   margin-top: 20px;
-  /* border: 1px solid var(--cloud); */
   padding: 8px;
   border-radius: 10px;
 }
@@ -639,12 +639,13 @@ table {
 }
 
 table thead tr {
-  background-color: #f2f2f2;
+  background-color: var(--gallery);
 }
 
-table th, table td {
+table th,
+table td {
   padding: 4px 6px;
-  border: 1px solid #ddd;
+  border: 1px solid var(--cloud);
 }
 th {
   color: var(--tuatara);
@@ -661,11 +662,27 @@ td {
 }
 
 .center-valor {
-text-align: center;
+  text-align: center;
 }
 
 table tbody tr:nth-child(even) {
-  background-color: #f9f9f9;
+  background-color: var(--hint-of-red);
 }
 
 /* PASSO 5 */
+.strong {
+  font-weight: bold !important;
+}
+
+.box-title-desembolso {
+  display: flex;
+  align-items: center;
+}
+
+.box-valores-despesas {
+  display: flex;
+  justify-content: flex-end;
+  margin: 10px 0;
+  text-align: center;
+}
+
