@@ -608,9 +608,10 @@ label {
 }
 
 .form-passo-cronograma-financeiro {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
   width: 100%;
-  justify-content: space-between;
   line-height: 20px;
   margin-top: 20px;
   border-top: 1px solid var(--cloud);
@@ -627,8 +628,8 @@ label {
 
 .box-valores {
   display: flex;
-  margin: 20px 0;
   justify-content: space-between;
+  margin: 20px 0;
 }
 
 .box-info-cronograma {
@@ -638,6 +639,9 @@ label {
 
 .box-info-cronograma.width {
   width: 200px;
+  white-space: nowrap;        /* Impede a quebra de linha */
+  overflow: hidden;           /* Oculta o texto que ultrapassa o contêiner */
+  text-overflow: ellipsis;    /* Adiciona reticências (...) ao texto que é truncado */
 }
 
 .box-info-cronograma.valor {
@@ -650,6 +654,9 @@ label {
 
 .box-info-cronograma.width.line {
   line-height: 32px;
+  white-space: nowrap;        /* Impede a quebra de linha */
+  overflow: hidden;           /* Oculta o texto que ultrapassa o contêiner */
+  text-overflow: ellipsis;    /* Adiciona reticências (...) ao texto que é truncado */
 }
 
 .valor-cronograma {
