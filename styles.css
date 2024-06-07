@@ -113,10 +113,10 @@ tr {
 .text-passo {
   color: var(--cloud);
   font-size: var(--font-size-xxxl);
-  font-style: normal;
   font-weight: 500;
   text-transform: uppercase;
   margin-top: 20px;
+  padding-bottom: 5px;
 }
 
 .title-passo {
@@ -131,6 +131,10 @@ tr {
   margin-top: 20px;
 }
 
+.border-top {
+  border-top: 1px solid var(--cloud);
+}
+
 .circule {
   color: var(--primary);
   font-size: 24px;
@@ -138,9 +142,7 @@ tr {
 
 .grid {
   margin: 20px 0;
-  /* border: 1px solid var(--cloud); */
   padding: 8px;
-  border-radius: 10px;
 }
 
 .box-circule {
@@ -322,7 +324,6 @@ tr {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* margin-top: 20px; */
 }
 
 .box-indicadores {
@@ -371,7 +372,6 @@ tr {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* margin-top: 20px; */
 }
 
 .produtos-gerados {
@@ -385,7 +385,6 @@ tr {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* margin-top: 20px; */
 }
 
 .marco-tipo {
@@ -407,7 +406,6 @@ tr {
 }
 
 .grid-riscos {
-  /* margin-left: 20px; */
   width: 100%;
 }
 
@@ -448,7 +446,6 @@ tr {
 }
 
 .perguntas-title {
-  /* margin-left: 30px; */
   color: var(--shark);
   font-size: var(--font-size-xl);
   font-style: normal;
@@ -457,7 +454,6 @@ tr {
 }
 
 .pergunta-card {
-  /* margin-left: 30px; */
   padding-bottom: 20px;
   border-bottom: 1px solid var(--cloud);
   width: 100%;
@@ -686,3 +682,47 @@ table tbody tr:nth-child(even) {
   text-align: center;
 }
 
+/* PASSO 6 */
+
+.dados-inicio-sobre {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.info-width-sobre {
+  width: 250px;
+  padding: 0 10px;
+}
+
+.border-title {
+  border-left: 4px solid var(--tuatara);
+  border-radius: 10px;
+  height: 19px;
+  margin-right: 10px;
+}
+
+.curriculo-box {
+  padding: 15px 0;
+}
+
+.curriculo-title {
+  color: var(--tuatara);
+  font-size: var(--font-size-m);
+  font-weight: 700;
+}
+
+.top {
+  margin-top: 15px;
+}
+
+.left {
+  padding-left: 10px;
+}
+
+.text-display {
+  display: flex;
+  flex-direction: column;
+  padding: 0 10px;
+}
