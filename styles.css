@@ -693,7 +693,7 @@ table tbody tr:nth-child(even) {
 
 .info-width-sobre {
   width: 250px;
-  padding: 0 10px;
+  /* padding: 0 10px; */
 }
 
 .border-title {
@@ -724,5 +724,5 @@ table tbody tr:nth-child(even) {
 .text-display {
   display: flex;
   flex-direction: column;
-  padding: 0 10px;
+  /* padding: 0 10px; */
 }
