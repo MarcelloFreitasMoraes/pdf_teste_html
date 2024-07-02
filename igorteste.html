@@ -1,0 +1,2375 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Funbio - PDF</title>
+  <link href="https: //fonts.googleapis.com/css2? family = Montserrat: wght @ 100 & display = swap "
+    rel=" stylesheet" />
+</head>
+<style>
+  @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+  @import url("https://fonts.googleapis.com/css?family=Roboto:500,700,900,400");
+
+  * {
+    box-sizing: border-box;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  label,
+  td,
+  tr {
+    font-family: "Roboto", Helvetica;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+
+  .revisao-e-envio {
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 9px;
+    display: flex;
+    align-items: center;
+  }
+
+  .revisao-e-envio .funbio-marca-horizontal {
+    background-color: transparent;
+    height: 70px;
+    margin: 10px;
+    object-fit: cover;
+    width: 147px;
+  }
+
+  .box-chamada {
+    border-left: 5px solid #92bb24;
+    margin-right: 10px;
+    width: 100%;
+    margin-top: 30px;
+    background-color: #ffffff;
+  }
+
+  .chamada-projeto {
+    margin-left: 20px;
+    padding-top: 10px;
+  }
+
+  .roboto-medium {
+    color: #363636;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px;
+  }
+
+  .title {
+    color: #363636;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    margin: 20px 0;
+  }
+
+  .roboto-medium-uppercase {
+    color: #363636;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 16px;
+  }
+
+  /* passo 1 */
+
+  .text-passo {
+    color: #c4c4c4;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-top: 20px;
+    padding-bottom: 5px;
+    font-family: Roboto, Helvetica;
+  }
+
+  .title-passo {
+    color: #005b5f;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    font-family: Roboto, Helvetica;
+  }
+
+  .border {
+    border-bottom: 1px solid #c4c4c4;
+    margin-top: 20px;
+  }
+
+  .border-top {
+    border-top: 1px solid #c4c4c4;
+  }
+
+  .border-botton {
+    border-bottom: 1px solid #c4c4c4;
+    padding-bottom: 20px;
+  }
+
+  .circule {
+    color: #005b5f;
+    font-size: 24px;
+  }
+
+  .grid {
+    margin: 20px 0;
+    padding: 8px;
+  }
+
+  .box-circule {
+    display: flex;
+    align-items: center;
+  }
+
+  .topico-passo {
+    margin-left: 10px;
+    color: #212529;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+  }
+
+  .dados-inicio {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .info-width {
+    width: 370px;
+  }
+
+  .info-title {
+    color: #212529;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: start;
+    font-family: Roboto, Helvetica;
+  }
+
+  .info-text {
+    color: #212529;
+    font-family: Roboto, Helvetica;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: start;
+    line-height: 16px;
+  }
+
+  .info-text-line {
+    color: #212529;
+    font-family: Roboto, Helvetica;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: start;
+    margin-bottom: 5px;
+    line-height: 16px;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .label {
+    color: #212529;
+    font-family: Roboto, Helvetica;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: start;
+  }
+
+  /* .form-input:disabled + .custom-checkbox {
+  background-color: lightgray;
+  border-color: red;
+}
+
+.form-input:disabled:checked + .custom-checkbox::after {
+  display: block;
+} */
+
+  .grid-resumo {
+    margin-top: 20px;
+  }
+
+  .info-text-grid {
+    color: #212529;
+    font-family: Roboto, Helvetica;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: start;
+    line-height: 16px;
+  }
+
+  .grid-antecedentes {
+    margin: 30px 0;
+  }
+
+  .grid-obj {
+    margin: 30px 0;
+  }
+
+  .valor {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 300px;
+    text-align: center;
+  }
+
+  .valor-title {
+    color: #212529;
+    font-family: Roboto, Helvetica;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    width: 150px;
+  }
+
+  .valor-num {
+    color: #212529;
+    ;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  .box-chamada-grid {
+    margin-right: 10px;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .box-info-text {
+    display: flex;
+    /* align-items: center;
+  justify-content: space-between; */
+  }
+
+  .grid-border {
+    border-bottom: 1px solid #c4c4c4;
+    margin-bottom: 10px;
+  }
+
+  .grid-title {
+    color: #363636;
+    font-size: 16px;
+    font-family: Roboto, Helvetica;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #c4c4c4;
+  }
+
+  .chamada-projeto-atividade {
+    margin-left: 20px;
+    padding-top: 20px;
+  }
+
+  .box-chamada-atividade {
+    margin-right: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .grid-atividade {
+    margin: 25px 0;
+  }
+
+  .grid-title-atividade {
+    color: #363636;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #c4c4c4;
+    font-family: Roboto, Helvetica;
+  }
+
+  .box-chamada-indicadores {
+    margin-right: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+
+  .box-indicadores {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    border-bottom: 1px solid #c4c4c4;
+  }
+
+  .grid-indicador {
+    margin-left: 20px;
+    width: 100%;
+  }
+
+  .indicador-tipo {
+    width: 180px;
+  }
+
+  .indicador-description {
+    width: 100%;
+    padding: 0 30px;
+  }
+
+  .indicador-meta {
+    width: 250px;
+  }
+
+  .chamada-projeto-indicadores {
+    margin-left: 20px;
+    padding-top: 30px;
+  }
+
+  .grid-title-indicadores {
+    color: #363636;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #c4c4c4;
+    font-family: Roboto, Helvetica;
+  }
+
+  .box-chamada-produtos {
+    margin-right: 10px;
+    width: 100%;
+    /* display: flex;
+  align-items: center;
+  justify-content: space-between; */
+  }
+
+  .produtos-gerados {
+    padding-bottom: 30px;
+    border-bottom: 1px solid #c4c4c4;
+  }
+
+  .box-chamada-marco {
+    margin-right: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .marco-tipo {
+    width: 100%;
+  }
+
+  .marco-description {
+    width: 100%;
+    padding: 0 30px;
+  }
+
+  .box-chamada-riscos {
+    border-left: 5px solid #212529;
+    ;
+    margin-right: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .grid-riscos {
+    width: 100%;
+  }
+
+  .box-riscos {
+    margin-left: 20px;
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  .riscos-info {
+    display: flex;
+    width: 100%;
+    padding: 30px 0;
+    border-bottom: 1px solid #c4c4c4;
+  }
+
+  .riscos-tipo {
+    width: 100%;
+  }
+
+  .box-circule-pergunta {
+    display: flex;
+    align-items: center;
+  }
+
+  .grid-questao {
+    padding: 8px;
+  }
+
+  .box-questao {
+    margin-top: 30px;
+    width: 100%;
+  }
+
+  .pergunta-title-contant {
+    width: 180px;
+    margin-bottom: 20px;
+  }
+
+  .perguntas-title {
+    color: #212529;
+    ;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .pergunta-card {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #c4c4c4;
+    width: 100%;
+  }
+
+  .text-pergunta {
+    color: #212529;
+    ;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 16px;
+  }
+
+  .text-resposta {
+    color: #212529;
+    ;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+  }
+
+  /* PASSO 2 */
+
+  .box-coordenador {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+  }
+
+  .border-title {
+    border-left: 4px solid #363636;
+    border-radius: 10px;
+    height: 19px;
+    margin-right: 10px;
+  }
+
+  .coordenador-title {
+    color: #363636;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+  }
+
+  .grid-passo-2 {
+    margin-top: 20px;
+    padding: 8px;
+    border-radius: 10px;
+  }
+
+  .form-passo-2 {
+    display: flex;
+    justify-content: space-between;
+    line-height: 20px;
+    margin-top: 20px;
+  }
+
+  .form-passo-membro {
+    display: flex;
+    flex-wrap: wrap;
+    line-height: 20px;
+    margin-top: 20px;
+  }
+
+  .form-passo-2.border {
+    border-bottom: 1px solid #c4c4c4;
+    padding-bottom: 20px;
+  }
+
+  .infos-passo-coordenador {
+    padding-left: 20px;
+  }
+
+  .box-info {
+    padding-top: 10px;
+    margin-left: 10px;
+  }
+
+  .info-left {
+    padding-left: 10px;
+  }
+
+  .box-info.membro {
+    width: 300px;
+  }
+
+  .title-info {
+    color: #363636;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+  }
+
+  .title-info-doc {
+    color: #363636;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    text-decoration: underline;
+  }
+
+  .text-info {
+    color: #212529;
+    ;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+  }
+
+  .box-chamada-cronograma-fisico {
+    margin-right: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+  }
+
+  .box-cronograma-fisico-atividades {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #c4c4c4;
+  }
+
+  .indicador-description-cronograma-fisico {
+    width: 100%;
+  }
+
+  .info-title-cronograma-fisico {
+    color: #212529;
+    ;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: start;
+  }
+
+  /* PASSO 4 */
+
+  .grid-title-cronograma-atividade {
+    color: #363636;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 24px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #c4c4c4;
+    margin-bottom: 15px;
+  }
+
+  .title-info.valor {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    line-height: 20px;
+    margin-top: 20px;
+    border-top: 1px solid #c4c4c4;
+  }
+
+  .box-valores {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+  }
+
+  .box-info-cronograma {
+    padding-top: 10px;
+    margin-left: 10px;
+  }
+
+  .valor-cronograma {
+    display: flex;
+    flex-direction: column;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: left;
+  }
+
+  table thead tr {
+    background-color: #f2f2f2;
+  }
+
+  table th,
+  table td {
+    padding: 4px 6px;
+    border: 1px solid #c4c4c4;
+  }
+
+  th {
+    color: #363636;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 24px;
+  }
+
+  td {
+    color: #363636;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  .center-valor {
+    text-align: center;
+  }
+
+  table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+
+  /* PASSO 5 */
+  .strong {
+    font-weight: bold !important;
+  }
+
+  .box-title-desembolso {
+    display: flex;
+    align-items: center;
+  }
+
+  .box-valores-despesas {
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  /* PASSO 6 */
+
+  .dados-inicio-sobre {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+
+  .info-width-sobre {
+    width: 250px;
+    /* padding: 0 10px; */
+  }
+
+  .border-title {
+    border-left: 4px solid #363636;
+    border-radius: 10px;
+    height: 19px;
+    margin-right: 10px;
+  }
+
+  .curriculo-box {
+    padding: 15px 0;
+  }
+
+  .curriculo-title {
+    color: #363636;
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  .top {
+    margin-top: 15px;
+  }
+
+  .left {
+    padding-left: 10px;
+  }
+
+  .text-display {
+    display: flex;
+    flex-direction: column;
+    /* padding: 0 10px; */
+  }
+</style>
+
+<body>
+  <header style="   width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 9px;
+  display: flex;
+  align-items: center;"> <img style="    background-color: transparent;
+    height: 70px;
+    margin: 10px;
+    object-fit: cover;
+    width: 147px;" src="./imagens/logo.png" alt="Logo Funbio" />
+  </header>
+  <div style="padding: 0 20px">
+    <div style="
+        border-left: 5px solid #92bb24;
+        margin-right: 10px;
+        width: 100%;
+        margin-top: 30px;
+        background-color: #ffffff;
+      ">
+      <div style="margin-left: 20px; padding-top: 10px">
+        <h3 style="
+                color: #363636;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 16px;
+                font-family: Roboto, Helvetica;
+              ">Chamada de Projetos </h3>
+        <h1 style="color: #363636; 
+                    font-size: 24px; 
+                    font-style: normal; 
+                    font-weight: 700; 
+                    line-height: 24px; 
+                    margin: 20px 0; 
+                    font-family: Roboto, Helvetica;">
+          Chamada de Projetos </h1>
+        <h3 style="
+                 color: #363636;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        text-transform: uppercase;
+        line-height: 16px;
+        font-family: Roboto, Helvetica;
+              "> </h3>
+      </div>
+    </div>
+
+    <!--passo 1-->
+    <div>
+      <section>
+        <h3 style="
+        color: #c4c4c4;
+        font-size: 18px;
+        font-weight: 500;
+        text-transform: uppercase;
+        margin-top: 20px;
+        padding-bottom: 5px;
+        font-family: Roboto, Helvetica;
+        ">Passo 1</h3>
+        <h2 style="
+              color: #005b5f;
+              font-size: 22px;
+              font-style: normal;
+              font-weight: 500;
+              font-family: Roboto, Helvetica;
+            ">Visão Geral do Projeto</h2>
+        <div style="border-bottom: 1px solid #c4c4c4; margin-top: 20px"></div>
+      </section>
+      <!-- 1.1 Dados Gerais do Projeto -->
+      <div style="       
+       margin: 20px 0;
+        padding: 8px;">
+        <div style="display: flex;
+    align-items: center;">
+          <div style="    color: #005b5f;
+    font-size: 24px;">•</div>
+          <h3 style="  margin-left: 10px;
+    color: #212529;    
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;">1.1 Dados Gerais do Projeto</h3>
+        </div>
+        <section style="   margin-top: 20px;
+    display: flex;
+    justify-content: space-between;">
+          <div style=" width: 370px;">
+            <h3 style="   color: #212529;    
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: start;
+    font-family: Roboto, Helvetica;">Nome do Projeto</h3>
+            <p style="   color: #212529;
+    font-family: Roboto, Helvetica;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: start;
+    line-height: 16px;"> fulano</p>
+          </div>
+          <div style=" width: 370px;">
+            <h3 style="   color: #212529;    
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: start;
+    font-family: Roboto, Helvetica;">Prazo estimado (em meses) *</h3>
+            <p style="   color: #212529;
+    font-family: Roboto, Helvetica;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: start;
+    line-height: 16px;">6 meses</p>
+          </div>
+          <div style=" width: 370px;">
+            <h3 style="   color: #212529;    
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: start;
+    font-family: Roboto, Helvetica;">Local da execução do projeto *</h3>
+            <p style="color: #212529;
+    font-family: Roboto, Helvetica;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: start;
+    margin-bottom: 5px;
+    line-height: 16px;"> </p>
+            <p style="    color: #212529;
+    font-family: Roboto, Helvetica;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: start;
+    margin-bottom: 5px;
+    line-height: 16px;">Rio de Janeiro, RJ</p>
+          </div>
+        </section>
+        <section style="   margin-top: 20px;
+    display: flex;
+    justify-content: space-between;">
+          <div style=" width: 370px;
+    display: flex;
+    flex-direction: column;">
+            <h3 style="   color: #212529;    
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: start;
+    font-family: Roboto, Helvetica;">Biomas De Atuação Do Projeto</h3>
+            <form style="display: flex; flex-direction: column;" action="">
+              <div> <input type="checkbox" name="bioma" value="true" checked disabled /> <label style="    color: #212529;
+    font-family: Roboto, Helvetica;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: start;"> Amazonia</label></div>
+            </form>
+          </div>
+          <div style=" width: 370px;
+    display: flex;
+    flex-direction: column;">
+            <h3 style="   color: #212529;    
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: start;
+    font-family: Roboto, Helvetica;">Linhas Temáticas Do Projeto</h3>
+            <form style="display: flex; flex-direction: column;" action="">
+              <div> <input type="checkbox" name="bioma" value="true" checked disabled /> <label style="    color: #212529;
+    font-family: Roboto, Helvetica;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: start;"> Criação e consolidação de Unidades de Conservação
+                </label>
+              </div>
+            </form>
+          </div>
+          <div style=" width: 370px;">
+            <h3 style="   color: #212529;    
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: start;
+    font-family: Roboto, Helvetica;">Unidade de Conservação (UC)</h3>
+            <p style="  color: #212529;
+    font-family: Roboto, Helvetica;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: start;
+    line-height: 16px;">teste</p>
+          </div>
+        </section>
+        <section style=" margin-top: 20px">
+          <div>
+            <h3 style="   color: #212529;    
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: start;
+    font-family: Roboto, Helvetica;">Resumo Executivo</h3>
+            <p style="  color: #212529;
+    font-family: Roboto, Helvetica;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: start;
+    line-height: 16px;">
+              teste
+            </p>
+          </div>
+          <div style="margin: 30px 0;">
+            <h3 style="   color: #212529;    
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: start;
+    font-family: Roboto, Helvetica;"> Antecedentes e justificativa da proposição * </h3>
+            <p style="  color: #212529;
+    font-family: Roboto, Helvetica;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: start;
+    line-height: 16px;">
+              teste 2
+            </p>
+          </div>
+          <div>
+            <h3 style="   color: #212529;    
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: start;
+    font-family: Roboto, Helvetica;">Identificação das Partes*</h3>
+            <p style="  color: #212529;
+    font-family: Roboto, Helvetica;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: start;
+    line-height: 16px;">
+              teste 4
+            </p>
+          </div>
+        </section>
+      </div>
+      <!-- 1.2 Objetivos e Resultados Esperados -->
+      <div style="        margin: 20px 0;
+        padding: 8px;">
+        <div style="  display: flex;
+    align-items: center;">
+          <div style="    color: #005b5f;
+    font-size: 24px;">•</div>
+          <h3 style="  margin-left: 10px;
+    color: #212529;    
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;">1.2 Objetivos e Resultados Esperados</h3>
+        </div>
+        <div style="margin: 30px 0">
+          <div>
+            <h3 style="   color: #212529;    
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: start;
+    font-family: Roboto, Helvetica;">Objetivo Geral Do Projeto*</h3>
+            <h1 style="   color: #212529;    
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: start;
+    font-family: Roboto, Helvetica;">Descrição*</h1>
+            <p style="  color: #212529;
+    font-family: Roboto, Helvetica;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: start;
+    line-height: 16px;">
+              teste
+            </p>
+          </div>
+        </div>
+        <div style="margin-left: 20px; padding-top: 10px">
+          <h1 style="    color: #363636;
+    font-size: 16px;
+    font-family: Roboto, Helvetica;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #c4c4c4;">A1 Objetivo Específico</h1>
+          <h1 style="   color: #212529;    
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: start;
+    font-family: Roboto, Helvetica;">Descrição*</h1>
+          <p style="  color: #212529;
+    font-family: Roboto, Helvetica;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: start;
+    line-height: 16px;">
+            teste
+          </p>
+        </div>
+        <div style="margin-left: 20px; padding-top: 10px">
+          <h1 style="   color: #212529;    
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: start;
+    font-family: Roboto, Helvetica;">Método*</h1>
+          <p style="  color: #212529;
+    font-family: Roboto, Helvetica;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: start;
+    line-height: 16px;">teste</p>
+        </div>
+        <div style="   margin-right: 10px;
+    width: 100%;
+    margin-top: 20px;">
+          <div style="margin-left: 20px; padding-top: 10px">
+            <h1 style="    color: #363636;
+    font-size: 16px;
+    font-family: Roboto, Helvetica;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #c4c4c4;">A1.1 Resultado Esperado</h1>
+            <h1 style="   color: #212529;    
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: start;
+    font-family: Roboto, Helvetica;">Descrição*</h1>
+            <div style="display: flex;">
+              <p style="  color: #212529;
+    font-family: Roboto, Helvetica;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: start;
+    line-height: 16px;">
+              <p style="  color: #212529;
+    font-family: Roboto, Helvetica;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: start;
+    line-height: 16px;">
+                teste
+              </p>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div style="    margin-right: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;">
+          <div style="  margin-left: 20px;
+    width: 100%;">
+            <h3 style="    color: #363636;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #c4c4c4;
+    font-family: Roboto, Helvetica;">INDICADORES</h3>
+            <div style="    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    border-bottom: 1px solid #c4c4c4;">
+              <div style="width: 180px;">
+                <h3 style="   color: #212529;    
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: start;
+    font-family: Roboto, Helvetica;">Tipo</h3>
+                <p style="  color: #212529;
+    font-family: Roboto, Helvetica;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: start;
+    line-height: 16px;"></p>
+              </div>
+              <div style=" width: 100%;
+    padding: 0 30px;">
+                <h3 style="   color: #212529;    
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: start;
+    font-family: Roboto, Helvetica;">Descrição</h3>
+                <p style="  color: #212529;
+    font-family: Roboto, Helvetica;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: start;
+    line-height: 16px;"> teste </p>
+              </div>
+              <div style=" width: 250px;">
+                <h3 style="   color: #212529;    
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: start;
+    font-family: Roboto, Helvetica;">Quantidade esperada</h3>
+                <p style="  color: #212529;
+    font-family: Roboto, Helvetica;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: start;
+    line-height: 16px;">20</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="margin-right: 10px;
+    width: 100%">
+          <div style="margin-left: 20px;">
+            <h3 style="    color: #363636;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #c4c4c4;
+    font-family: Roboto, Helvetica;">PRODUTOS GERADOS</h3>
+            <div style="margin: 25px 0">
+              <div style=" padding-bottom: 30px;
+    border-bottom: 1px solid #c4c4c4;">
+                <h3 style="   color: #212529;    
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: start;
+    font-family: Roboto, Helvetica;">Descrição</h3>
+                <p style="  color: #212529;
+    font-family: Roboto, Helvetica;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: start;
+    line-height: 16px;"> teste </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="margin-right: 10px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;">
+          <div style="margin-left: 20px;
+    width: 100%;">
+            <h3 style="    color: #363636;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #c4c4c4;
+    font-family: Roboto, Helvetica;">MARCO</h3>
+            <div style="    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    border-bottom: 1px solid #c4c4c4;">
+              <div style="width: 100%;">
+                <h3 style="   color: #212529;    
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: start;
+    font-family: Roboto, Helvetica;">Título</h3>
+                <p style="  color: #212529;
+    font-family: Roboto, Helvetica;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: start;
+    line-height: 16px;">teste 2023</p>
+              </div>
+              <div style="   width: 100%;
+    padding: 0 30px;">
+                <h3 style="   color: #212529;    
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: start;
+    font-family: Roboto, Helvetica;">Descrição</h3>
+                <p style="  color: #212529;
+    font-family: Roboto, Helvetica;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: start;
+    line-height: 16px;"> </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="    margin-right: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;">
+          <div style="    margin-left: 20px;
+          width: 100%;
+          margin-top: 30px;">
+            <h3 style="    color: #363636;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #c4c4c4;
+    font-family: Roboto, Helvetica;"> RISCOS E OPORTUNIDADES </h3>
+            <div style=" display: flex;
+    width: 100%;
+    padding: 30px 0;
+    border-bottom: 1px solid #c4c4c4;">
+              <div style=" width: 100%">
+                <h3 style="   color: #212529;    
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: start;
+    font-family: Roboto, Helvetica;">Título</h3>
+                <p style="  color: #212529;
+    font-family: Roboto, Helvetica;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: start;
+    line-height: 16px;"> teste </p>
+              </div>
+              <div style=" width: 100%">
+                <h3 style="   color: #212529;    
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: start;
+    font-family: Roboto, Helvetica;">Tipo</h3>
+                <p style="  color: #212529;
+    font-family: Roboto, Helvetica;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: start;
+    line-height: 16px;"></p>
+              </div>
+              <div>
+                <h3 style="   color: #212529;    
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: start;
+    font-family: Roboto, Helvetica;">Nível</h3>
+                <p style="  color: #212529;
+    font-family: Roboto, Helvetica;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: start;
+    line-height: 16px;"></p>
+              </div>
+            </div>
+            <div style=" display: flex;
+    width: 100%;
+    padding: 30px 0;
+    border-bottom: 1px solid #c4c4c4;">
+              <div style=" width: 100%">
+                <h3 style="   color: #212529;    
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: start;
+    font-family: Roboto, Helvetica;">Título</h3>
+                <p style="  color: #212529;
+    font-family: Roboto, Helvetica;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: start;
+    line-height: 16px;"> </p>
+              </div>
+              <div style=" width: 100%">
+                <h3 style="   color: #212529;    
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: start;
+    font-family: Roboto, Helvetica;">Tipo</h3>
+                <p style="  color: #212529;
+    font-family: Roboto, Helvetica;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: start;
+    line-height: 16px;"></p>
+              </div>
+              <div>
+                <h3 style="   color: #212529;    
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: start;
+    font-family: Roboto, Helvetica;">Nível</h3>
+                <p style="  color: #212529;
+    font-family: Roboto, Helvetica;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: start;
+    line-height: 16px;"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="    padding-top: 20px;">
+          <div style="margin: 25px 0">
+            <h3 style="    color: #363636;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #c4c4c4;
+    font-family: Roboto, Helvetica;">A1.1.1 Atividade</h3>
+            <div>
+              <h3 style="   color: #212529;    
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: start;
+    font-family: Roboto, Helvetica;">Descrição</h3>
+              <p style="  color: #212529;
+    font-family: Roboto, Helvetica;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: start;
+    line-height: 16px;"> </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 1.3 Questões Adicionais -->
+    <div>
+      <div class="grid-questao">
+        <div class="box-circule-pergunta">
+          <div style="    color: #005b5f;
+    font-size: 24px;">•</div>
+          <h3 style="  margin-left: 10px;
+    color: #212529;    
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;">1.3 Questões Adicionais</h3>
+        </div>
+        <div class="box-questao">
+          <div class="pergunta-title-contant">
+            <h3 class="perguntas-title">PERGUNTA 1*</h3>
+          </div>
+          <div class="pergunta-card">
+            <p class="text-pergunta"> A sua instituição leva em consideração questões de integração de
+              gênero nas suas políticas internas, contratações e projetos? Se sim, explique brevemente
+              como isso é feito, incluindo se há garantias de isonomia em processos de seleção e
+              remuneração.* </p>
+            <br />
+            <p class="text-resposta">
+            <p style="  color: #212529;
+    font-family: Roboto, Helvetica;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: start;
+    line-height: 16px;">
+              teste
+            </p>
+            </p>
+          </div>
+        </div>
+        <div class="box-questao">
+          <div class="pergunta-title-contant">
+            <h3 class="perguntas-title">PERGUNTA 2*</h3>
+          </div>
+          <div class="pergunta-card">
+            <p class="text-pergunta"> O seu projeto irá lidar com povos indígenas e/ou quilombolas? Em caso
+              positivo, como será feita a divulgação da informação a estes povos sobre os objetivos do
+              projeto e os resultados alcançados?* </p>
+            <br />
+            <p class="text-resposta">
+            <p style="  color: #212529;
+    font-family: Roboto, Helvetica;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: start;
+    line-height: 16px;">
+              teste
+            </p>
+            </p>
+          </div>
+        </div>
+        <div class="box-questao">
+          <div class="pergunta-title-contant">
+            <h3 class="perguntas-title">PERGUNTA 3*</h3>
+          </div>
+          <div class="pergunta-card">
+            <p class="text-pergunta"> Quais serão os mecanismos de contratação, capacitação ou engajamento
+              das comunidades locais e a forma de continuidade das ações após o encerramento do projeto?*
+            </p>
+            <br />
+            <p class="text-resposta">
+            <p style="  color: #212529;
+    font-family: Roboto, Helvetica;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: start;
+    line-height: 16px;">teste teste s</p>
+            </p>
+          </div>
+        </div>
+        <div class="box-questao">
+          <div class="pergunta-title-contant">
+            <h3 class="perguntas-title">PERGUNTA 4*</h3>
+          </div>
+          <div class="pergunta-card">
+            <p class="text-pergunta"> </p>
+            <br />
+            <p class="text-resposta">
+            <p style="  color: #212529;
+    font-family: Roboto, Helvetica;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: start;
+    line-height: 16px;">sddasdasd</p>
+            </p>
+          </div>
+        </div>
+        <div class="box-questao">
+          <div class="pergunta-title-contant">
+            <h3 class="perguntas-title">PERGUNTA 5*</h3>
+          </div>
+          <div class="pergunta-card">
+            <p class="text-pergunta"> Pergunta 3 </p>
+            <br />
+            <p class="text-resposta">
+            <p style="  color: #212529;
+    font-family: Roboto, Helvetica;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: start;
+    line-height: 16px;">1das</p>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <section>
+        <h3 style="
+        color: #c4c4c4;
+        font-size: 18px;
+        font-weight: 500;
+        text-transform: uppercase;
+        margin-top: 20px;
+        padding-bottom: 5px;
+        font-family: Roboto, Helvetica;
+        ">Passo 2</h3>
+        <h2 style="
+              color: #005b5f;
+              font-size: 22px;
+              font-style: normal;
+              font-weight: 500;
+              font-family: Roboto, Helvetica;
+            ">Equipe do Projeto</h2>
+        <div style="border-bottom: 1px solid #c4c4c4; margin-top: 20px"></div>
+      </section>
+      <div class="grid-passo-2">
+        <div class="box-coordenador">
+          <div class="border-title"></div>
+          <h2 class="coordenador-title">COORDENADOR (A) DO PROJETO</h2>
+        </div>
+        <div class="form-passo-membro">
+          <div class="box-info membro">
+            <h3 class="title-info">CPF</h3>
+            <p class="text-info">593.329.920-02</p>
+          </div>
+          <div class="box-info membro">
+            <h3 class="title-info">Nome</h3>
+            <p class="text-info">maicon santos</p>
+          </div>
+          <div class="box-info membro">
+            <h3 class="title-info">Email</h3>
+            <p class="text-info">maicon.santos5@fatec.sp.gov.br</p>
+          </div>
+          <div class="box-info membro">
+            <h3 class="title-info">Telefone</h3>
+            <p class="text-info">(15) 99734-1422</p>
+          </div>
+          <div class="box-info membro">
+            <h3 class="title-info">Origem</h3>
+            <p class="text-info">Projeto</p>
+          </div>
+          <div class="box-info membro">
+            <h3 class="title-info">Tipo de Vínculo</h3>
+            <p class="text-info">CLT</p>
+          </div>
+          <div class="box-info membro">
+            <h3 class="title-info">Tempo no Projeto</h3>
+            <p class="text-info">3 meses</p>
+          </div>
+          <div class="box-info membro">
+            <h3 class="title-info">Horas Semanais</h3>
+            <p class="text-info">40 horas</p>
+          </div>
+          <!-- </div> -->
+          <!-- <div class="form-passo-2 border"> -->
+          <div class="box-info membro">
+            <h3 class="title-info">Experiência / Formação*</h3>
+            <p class="text-info">
+            <p style="  color: #212529;
+    font-family: Roboto, Helvetica;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: start;
+    line-height: 16px;">
+              teste
+            </p>
+            </p>
+          </div>
+          <div>
+            <div class="box-info">
+              <h3 class="title-info">Documentos</h3>
+            </div>
+            <div class="info-left">
+              <p class="title-info-doc">download.png</p>
+            </div>
+            <div class="info-left">
+              <p class="title-info-doc">download.png</p>
+            </div>
+            <div class="info-left">
+              <p class="title-info-doc">download.png</p>
+            </div>
+            <div class="info-left">
+              <p class="title-info-doc"></p>
+            </div>
+          </div>
+          <!-- </div> -->
+        </div>
+
+        <div>
+          <div class="box-coordenador">
+            <div class="border-title"></div>
+            <h2 class="coordenador-title">ORDENADOR (A) DO PROJETO</h2>
+          </div>
+          <div class="form-passo-membro">
+            <div class="box-info membro">
+              <h3 class="title-info">CPF</h3>
+              <p class="text-info">593.329.920-02</p>
+            </div>
+            <div class="box-info membro">
+              <h3 class="title-info">Nome</h3>
+              <p class="text-info">Ordenador</p>
+            </div>
+            <div class="box-info membro">
+              <h3 class="title-info">Email</h3>
+              <p class="text-info">maicon.santos5@fatec.sp.gov.br</p>
+            </div>
+            <div class="box-info membro">
+              <h3 class="title-info">Telefone</h3>
+              <p class="text-info">(15) 99734-1422</p>
+            </div>
+            <div class="box-info membro">
+              <h3 class="title-info">Origem</h3>
+              <p class="text-info">Projeto</p>
+            </div>
+            <div class="box-info membro">
+              <h3 class="title-info">Tipo de Vínculo</h3>
+              <p class="text-info">CLT</p>
+            </div>
+            <div class="box-info membro">
+              <h3 class="title-info">Tempo no Projeto</h3>
+              <p class="text-info">3 meses</p>
+            </div>
+            <div class="box-info membro">
+              <h3 class="title-info">Horas Semanais</h3>
+              <p class="text-info">40 horas</p>
+            </div>
+            <!-- </div> -->
+            <!-- <div class="form-passo-2 border"> -->
+            <div class="box-info membro">
+              <h3 class="title-info">Experiência / Formação*</h3>
+              <p style="  color: #212529;
+    font-family: Roboto, Helvetica;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: start;
+    line-height: 16px;">
+                teste
+              </p>
+            </div>
+            <div>
+              <div class="box-info">
+                <h3 class="title-info">Documentos</h3>
+              </div>
+              <div class="info-left">
+                <p class="title-info-doc">download.png</p>
+              </div>
+              <div class="info-left">
+                <p class="title-info-doc">download.png</p>
+              </div>
+              <div class="info-left">
+                <p class="title-info-doc">download.png</p>
+              </div>
+              <div class="info-left">
+                <p class="title-info-doc"></p>
+              </div>
+            </div>
+            <!-- </div> -->
+          </div>
+          <div>
+            <div style="  display: flex;
+    align-items: center;">
+              <div style="    color: #005b5f;
+    font-size: 24px;">•</div>
+              <h3 style="  margin-left: 10px;
+    color: #212529;    
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;">2.2 Outros membros do Projeto</h3>
+            </div>
+            <div class="box-coordenador">
+              <div class="border-title"></div>
+              <h2 class="coordenador-title">OUTROS MEMBROS</h2>
+            </div>
+            <div class="form-passo-membro border-botton">
+              <div class="box-info membro">
+                <h3 class="title-info">CPF</h3>
+                <p class="text-info"></p>
+              </div>
+              <div class="box-info membro">
+                <h3 class="title-info">Nome</h3>
+                <p class="text-info">Membro 1</p>
+              </div>
+              <div class="box-info membro">
+                <h3 class="title-info">Email</h3>
+                <p class="text-info"></p>
+              </div>
+              <div class="box-info membro">
+                <h3 class="title-info">Telefone</h3>
+                <p class="text-info"></p>
+              </div>
+              <div class="box-info membro">
+                <h3 class="title-info">Atribuição Projeto*</h3>
+                <p class="text-info"></p>
+              </div>
+              <!-- </div>
+                           <div class="form-passo-membro"> -->
+              <div class="box-info membro">
+                <h3 class="title-info">Origem</h3>
+                <p class="text-info">Contrapartida</p>
+              </div>
+              <div class="box-info membro">
+                <h3 class="title-info">Tipo de Vínculo</h3>
+                <p class="text-info"></p>
+              </div>
+              <div class="box-info membro">
+                <h3 class="title-info">Dedicação no Projeto (meses)</h3>
+                <p class="text-info">0 meses</p>
+              </div>
+              <div class="box-info membro">
+                <h3 class="title-info">Carga Horária Semanal</h3>
+                <p class="text-info">0 horas</p>
+              </div>
+              <div class="box-info membro">
+                <h3 class="title-info">Atividades Associadas</h3>
+                <p class="text-info"></p>
+              </div>
+              <!-- </div>
+                            <div class="form-passo-2 border"> -->
+              <div class="box-info membro">
+                <h3 class="title-info">Experiência / Formação*</h3>
+                <p class="text-info"> </p>
+              </div>
+              <div>
+                <div class="box-info membro">
+                  <h3 class="title-info">Documentos</h3>
+                </div>
+                <div class="info-left">
+                  <p class="title-info-doc"></p>
+                </div>
+                <div class="info-left">
+                  <p class="title-info-doc"></p>
+                </div>
+                <div class="info-left">
+                  <p class="title-info-doc"></p>
+                </div>
+                <div class="info-left">
+                  <p class="title-info-doc"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="grid-passo-2">
+          <section>
+            <h3 style="
+        color: #c4c4c4;
+        font-size: 18px;
+        font-weight: 500;
+        text-transform: uppercase;
+        margin-top: 20px;
+        padding-bottom: 5px;
+        font-family: Roboto, Helvetica;
+        ">Passo 3</h3>
+            <h2 style="
+              color: #005b5f;
+              font-size: 22px;
+              font-style: normal;
+              font-weight: 500;
+              font-family: Roboto, Helvetica;
+            ">Cronograma Físico</h2>
+            <div style="border-bottom: 1px solid #c4c4c4; margin-top: 20px"></div>
+          </section>
+          <div style="        margin: 20px 0;
+        padding: 8px;">
+            <div style="  display: flex;
+    align-items: center;">
+              <div style="    color: #005b5f;
+    font-size: 24px;">•</div>
+              <h3 style="  margin-left: 10px;
+    color: #212529;    
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;">3.1 Cronograma Físico</h3>
+            </div>
+            <div style="   margin-right: 10px;
+    width: 100%;
+    margin-top: 20px;">
+              <div style="margin-left: 20px; padding-top: 10px">
+                <h1 style="    color: #363636;
+    font-size: 16px;
+    font-family: Roboto, Helvetica;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #c4c4c4;">A1 Objetivo Específico</h1>
+                <p style="  color: #212529;
+    font-family: Roboto, Helvetica;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: start;
+    line-height: 16px;">
+                <p style="  color: #212529;
+    font-family: Roboto, Helvetica;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: start;
+    line-height: 16px;">
+                  teste
+                </p>
+                </p>
+              </div>
+
+              <div style="margin-left: 20px; padding-top: 10px">
+                <h1 style="    color: #363636;
+    font-size: 16px;
+    font-family: Roboto, Helvetica;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #c4c4c4;">A1.1 Resultado Esperado</h1>
+                <div style="display: flex;">
+                  <p style="  color: #212529;
+    font-family: Roboto, Helvetica;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: start;
+    line-height: 16px;">
+                  <p style="  color: #212529;
+    font-family: Roboto, Helvetica;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: start;
+    line-height: 16px;">
+                    teste
+                  </p>
+                  </p>
+                </div>
+              </div>
+
+              <div class="box-chamada-cronograma-fisico">
+                <div style="  margin-left: 20px;
+    width: 100%;">
+                  <h3 style="    color: #363636;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #c4c4c4;
+    font-family: Roboto, Helvetica;">ATIVIDADE</h3>
+                  <div class="box-cronograma-fisico-atividades">
+                    <div class="indicador-description-cronograma-fisico">
+                      <!-- <h3 class="info-title-cronograma-fisico">
+                                        A1.1.1. ATIVIDADE
+                                      </h3> -->
+                      <p style="  color: #212529;
+    font-family: Roboto, Helvetica;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: start;
+    line-height: 16px;">
+                        teste
+                      </p>
+                    </div>
+                    <div style=" width: 250px;">
+                      <br />
+                      <h3 class="info-title-cronograma-fisico">
+                        Mês(es): 3, 4, 5
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="box-chamada-cronograma-fisico">
+                <div style="  margin-left: 20px;
+    width: 100%;">
+                  <h3 style="    color: #363636;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #c4c4c4;
+    font-family: Roboto, Helvetica;">INDICADORES</h3>
+                  <div class="box-cronograma-fisico-atividades">
+                    <div class="indicador-description-cronograma-fisico">
+                      <p style="  color: #212529;
+    font-family: Roboto, Helvetica;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: start;
+    line-height: 16px;"> teste </p>
+                    </div>
+                    <div style=" width: 250px;">
+                      <br />
+                      <h3 class="info-title-cronograma-fisico"> Mês(es): </h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="box-chamada-cronograma-fisico">
+                <div style="  margin-left: 20px;
+    width: 100%;">
+                  <h3 style="    color: #363636;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #c4c4c4;
+    font-family: Roboto, Helvetica;">PRODUTO GERADO</h3>
+                  <div style="margin: 25px 0">
+                    <div class="box-cronograma-fisico-atividades">
+                      <div class="indicador-description-cronograma-fisico">
+                        <p style="  color: #212529;
+    font-family: Roboto, Helvetica;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: start;
+    line-height: 16px;"> teste </p>
+                      </div>
+                      <div style=" width: 250px;">
+                        <br />
+                        <h3 class="info-title-cronograma-fisico"> Mês(es): a fazer </h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="box-chamada-cronograma-fisico">
+                <div style="  margin-left: 20px;
+    width: 100%;">
+                  <h3 style="    color: #363636;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #c4c4c4;
+    font-family: Roboto, Helvetica;">MARCO</h3>
+                  <div class="box-cronograma-fisico-atividades">
+                    <div class="indicador-description-cronograma-fisico">
+                      <p style="  color: #212529;
+    font-family: Roboto, Helvetica;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: start;
+    line-height: 16px;">teste 2023 </p>
+                    </div>
+                    <div style=" width: 250px;">
+                      <br />
+                      <h3 class="info-title-cronograma-fisico"> Mês(es): [[[MESES]]] </h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="box-cronograma-fisico-atividades">
+                                <div class="indicador-description-cronograma-fisico">
+                                    <h3 class="info-title-cronograma-fisico"> A1.1.1 Atividade </h3>
+                                    <p style="  color: #212529;
+    font-family: Roboto, Helvetica;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: start;
+    line-height: 16px;"> </p>
+                                </div>
+                                <div style=" width: 250px;">
+                                    <br />
+                                    <h3 class="info-title-cronograma-fisico"> Mês(es): 2, 3 </h3>
+                                </div>
+                            </div> -->
+            </div>
+          </div>
+        </div>
+        <div class="grid-passo-2">
+          <section>
+            <h3 style="
+        color: #c4c4c4;
+        font-size: 18px;
+        font-weight: 500;
+        text-transform: uppercase;
+        margin-top: 20px;
+        padding-bottom: 5px;
+        font-family: Roboto, Helvetica;
+        ">Passo 4</h3>
+            <h2 style="
+              color: #005b5f;
+              font-size: 22px;
+              font-style: normal;
+              font-weight: 500;
+              font-family: Roboto, Helvetica;
+            ">Cronograma Financeiro</h2>
+            <div style="border-bottom: 1px solid #c4c4c4; margin-top: 20px"></div>
+          </section>
+          <div style="        margin: 20px 0;
+        padding: 8px;">
+            <div style="  display: flex;
+    align-items: center;">
+              <div style="    color: #005b5f;
+    font-size: 24px;">•</div>
+              <h3 style="  margin-left: 10px;
+    color: #212529;    
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;">4.1 Descrição das Despesas do Projeto</h3>
+            </div>
+            <div style="margin-left: 20px; padding-top: 10px">
+              <h1 style="    color: #363636;
+    font-size: 16px;
+    font-family: Roboto, Helvetica;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #c4c4c4;">A1 Objetivo Específico</h1>
+              <div class="box-valores">
+                <div class="valor-cronograma">
+                  <p class="valor-title">Total</p>
+                  <p class="valor-num">32.871,00</p>
+                </div>
+                <div class="valor-cronograma">
+                  <p class="valor-title">Projeto</p>
+                  <p class="valor-num">32.867,00</p>
+                </div>
+                <div class="valor-cronograma">
+                  <p class="valor-title">Contrapartida</p>
+                  <p class="valor-num">4,00</p>
+                </div>
+              </div>
+              <div style="display: flex;">
+                <p style="  color: #212529;
+    font-family: Roboto, Helvetica;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: start;
+    line-height: 16px;">
+                <p style="  color: #212529;
+    font-family: Roboto, Helvetica;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: start;
+    line-height: 16px;">
+                  teste
+                </p>
+                </p>
+              </div>
+            </div>
+            <div style="   margin-right: 10px;
+    width: 100%;
+    margin-top: 20px;">
+              <div style="margin-left: 20px; padding-top: 10px">
+                <h1 style="    color: #363636;
+    font-size: 16px;
+    font-family: Roboto, Helvetica;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #c4c4c4;">A1.1 Resultado Esperado</h1>
+                <div class="box-valores">
+                  <div class="valor-cronograma">
+                    <p class="valor-title">Total</p>
+                    <p class="valor-num">32.871,00</p>
+                  </div>
+                  <div class="valor-cronograma">
+                    <p class="valor-title">Projeto</p>
+                    <p class="valor-num">32.867,00</p>
+                  </div>
+                  <div class="valor-cronograma">
+                    <p class="valor-title">Contrapartida</p>
+                    <p class="valor-num">4,00</p>
+                  </div>
+                </div>
+                <div style="display: flex;">
+                  <p style="  color: #212529;
+    font-family: Roboto, Helvetica;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: start;
+    line-height: 16px;">
+                  <p style="  color: #212529;
+    font-family: Roboto, Helvetica;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: start;
+    line-height: 16px;">
+                    teste
+                  </p>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div style="   margin-right: 10px;
+    width: 100%;
+    margin-top: 20px;">
+              <div style="margin-left: 20px; padding-top: 10px">
+                <h1 class="grid-title-cronograma-atividade"> A1.1.1 Atividade</h1>
+                <div class="box-valores">
+                  <div class="valor-cronograma">
+                    <p class="valor-title">Total</p>
+                    <p class="valor-num">32.871,00</p>
+                  </div>
+                  <div class="valor-cronograma">
+                    <p class="valor-title">Projeto</p>
+                    <p class="valor-num">32.867,00</p>
+                  </div>
+                  <div class="valor-cronograma">
+                    <p class="valor-title">Contrapartida</p>
+                    <p class="valor-num">4,00</p>
+                  </div>
+                </div>
+                <div style="display: flex;">
+                  <p style="  color: #212529;
+    font-family: Roboto, Helvetica;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: start;
+    line-height: 16px;"> </p>
+                </div>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Despesa elegível</th>
+                      <th>Insumo</th>
+                      <th>Ajuda memória</th>
+                      <th class="center-valor">Valor unitário*</th>
+                      <th class="center-valor">Quantidade*</th>
+                      <th class="center-valor">Valor total*</th>
+                      <th>Origem</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Alimentação</td>
+                      <td>Desembolso - Fotocópias/ Cartório/Postagem</td>
+                      <td>1</td>
+                      <td class="center-valor">2,00</td>
+                      <td class="center-valor">200</td>
+                      <td class="center-valor">400,00</td>
+                      <td>Projeto</td>
+                    </tr>
+                    <tr>
+                      <td>Despesas administrativas</td>
+                      <td>Desembolso - Fotocópias/ Cartório/Postagem</td>
+                      <td>123</td>
+                      <td class="center-valor">23,00</td>
+                      <td class="center-valor">10</td>
+                      <td class="center-valor">230,00</td>
+                      <td>Projeto</td>
+                    </tr>
+                    <tr>
+                      <td>Despesas administrativas</td>
+                      <td>Desembolso - Água, Luz, Telefone, Internet, Hospedagem de Site</td>
+                      <td>a</td>
+                      <td class="center-valor">1000,00</td>
+                      <td class="center-valor">10</td>
+                      <td class="center-valor">10000,00</td>
+                      <td>Projeto</td>
+                    </tr>
+                    <tr>
+                      <td>Despesas administrativas</td>
+                      <td>Desembolso - Alimentação </td>
+                      <td>tes</td>
+                      <td class="center-valor">11112,00</td>
+                      <td class="center-valor">2</td>
+                      <td class="center-valor">22224,00</td>
+                      <td>Projeto</td>
+                    </tr>
+                    <tr>
+                      <td>Material de Campo</td>
+                      <td>Cartão alimentação</td>
+                      <td>2</td>
+                      <td class="center-valor">2,00</td>
+                      <td class="center-valor">2</td>
+                      <td class="center-valor">4,00</td>
+                      <td>Contrapartida</td>
+                    </tr>
+                    <tr>
+                      <td>Autônomo</td>
+                      <td>Desembolso - Sistema de Irrigação </td>
+                      <td>62</td>
+                      <td class="center-valor">6,00</td>
+                      <td class="center-valor">2</td>
+                      <td class="center-valor">12,00</td>
+                      <td>Projeto</td>
+                    </tr>
+                    <tr>
+                      <td>Móveis e Utensílios</td>
+                      <td>Desembolso - Aluguel</td>
+                      <td>teste</td>
+                      <td class="center-valor">1,00</td>
+                      <td class="center-valor">1</td>
+                      <td class="center-valor">1,00</td>
+                      <td>Projeto</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div style="        margin: 20px 0;
+        padding: 8px;">
+              <div style="  display: flex;
+    align-items: center;">
+                <div style="    color: #005b5f;
+    font-size: 24px;">•</div>
+                <h3 style="  margin-left: 10px;
+    color: #212529;    
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;">4.2 Despesas com a Equipe do Projeto</h3>
+              </div>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Despesa elegível</th>
+                    <th>Insumo</th>
+                    <th>Atribuição</th>
+                    <th>Nome e sobrenome</th>
+                    <th class="center-valor">Valor total</th>
+                    <th>Origem</th>
+                    <th class="center-valor">Dedicação</th>
+                    <th class="center-valor">Horas Semanais</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Salários e Encargos</td>
+                    <td>Cartão manutenção</td>
+                    <td></td>
+                    <td></td>
+                    <td class="center-valor">5,00</td>
+                    <td>Projeto</td>
+                    <td class="center-valor"> mes(es)</td>
+                    <td class="center-valor"> Horas</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div style="        margin: 20px 0;
+        padding: 8px;">
+              <div style="  display: flex;
+    align-items: center;">
+                <div style="    color: #005b5f;
+    font-size: 24px;">•</div>
+                <h3 style="  margin-left: 10px;
+    color: #212529;    
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;"> 4.3 Despesas com Fortalecimento Institucional</h3>
+              </div>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Despesa elegível</th>
+                    <th>Insumo</th>
+                    <th>Ajuda memória</th>
+                    <th class="center-valor">Valor unitário*</th>
+                    <th class="center-valor">Quantidade*</th>
+                    <th class="center-valor">Valor total*</th>
+                    <th>Origem</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Despesas administrativas</td>
+                    <td>Cartão combustível</td>
+                    <td>2</td>
+                    <td class="center-valor">3,00</td>
+                    <td class="center-valor">3</td>
+                    <td class="center-valor">9,00</td>
+                    <td>Projeto</td>
+                  </tr>
+                  <tr>
+                    <td>Combustível</td>
+                    <td>Desembolso - Sistema de Irrigação </td>
+                    <td>123</td>
+                    <td class="center-valor">13,00</td>
+                    <td class="center-valor">1</td>
+                    <td class="center-valor">13,00</td>
+                    <td>Projeto</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div style="        margin: 20px 0;
+        padding: 8px;">
+              <div style="  display: flex;
+    align-items: center;">
+                <div style="    color: #005b5f;
+    font-size: 24px;">•</div>
+                <h3 style="  margin-left: 10px;
+    color: #212529;    
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;"> 4.4 Despesas Administrativas</h3>
+              </div>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Despesa elegível</th>
+                    <th>Insumo</th>
+                    <th>Ajuda memória</th>
+                    <th class="center-valor">Valor unitário*</th>
+                    <th class="center-valor">Quantidade*</th>
+                    <th class="center-valor">Valor total*</th>
+                    <th>Origem</th>
+                  </tr>
+                </thead>
+                <tbody> </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+</body>
+
+</html>
